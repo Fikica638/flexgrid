@@ -1,0 +1,214 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #e7f3fa; /* Baby blue background */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #1a73e8;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header .logo {
+    font-size: 1.5em;
+  }
+  
+  nav a {
+    color: #ffffff;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffefd5;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5em 2em;
+    background: url('ohrid-hero.jpg') no-repeat center/cover;
+    color: #ffffff;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    animation: fadeInDown 1.5s ease-out;
+  }
+  
+  .hero p {
+    margin: 0.5em 0 1em;
+    font-size: 1.2em;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero button {
+    background-color: #1a73e8;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background-color: #004aad;
+    transform: scale(1.05);
+  }
+  
+  /* About Section */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em;
+    gap: 2em;
+    align-items: center;
+  }
+  
+  .about .text {
+    font-size: 1.1em;
+  }
+  
+  .about img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .about img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Attractions Section */
+  .attractions {
+    padding: 2em;
+    text-align: center;
+    background-color: #f9fbfd;
+  }
+  
+  .attractions h2 {
+    font-size: 2em;
+    color: #1a73e8;
+    margin-bottom: 1em;
+  }
+  
+  .attraction-card {
+    display: inline-block;
+    width: 200px;
+    margin: 1em;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .attraction-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .attraction-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 2em;
+  }
+  
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 2em;
+    background-color: #e7f3fa;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    color: #1a73e8;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .contact input, .contact textarea {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .contact button {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    padding: 0.8em;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #004aad;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
